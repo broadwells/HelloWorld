@@ -21,6 +21,4 @@ target/
 #hibernate
 src/main/resources/hibernate.cfg.xml
 
-#properties
-src/main/resources/config.properties
 
