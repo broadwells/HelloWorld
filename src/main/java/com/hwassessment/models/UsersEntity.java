@@ -117,5 +117,4 @@ public class UsersEntity {
     public void setDate(Timestamp date) {
         this.date = date;
     }
-
 }

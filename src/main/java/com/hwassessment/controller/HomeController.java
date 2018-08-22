@@ -89,6 +89,4 @@ public class HomeController {
 
         return new ModelAndView("admin", "list", userList);
     }
-
-
 }
