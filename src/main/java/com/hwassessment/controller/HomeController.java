@@ -27,7 +27,7 @@ public class HomeController {
     public ModelAndView addUser(@RequestParam("fName") String userFirst, @RequestParam("lName") String userLast,
                                 @RequestParam("address1") String userAdd, @RequestParam("address2") String userAdd2,
                                 @RequestParam("city") String userCity, @RequestParam("state") String userState,
-                                @RequestParam("zip") int userZip) {
+                                @RequestParam("zip") String userZip) {
 
         String countryInit = "USA";
         String fullName = userFirst + " " + userLast;
