@@ -7,7 +7,7 @@ import java.sql.Timestamp;
  * Created by broadwells on 8/23/18.
  */
 @Entity
-@Table(name = "Users", schema = "ebdb", catalog = "")
+@Table(name = "Users", schema = "ebdb")
 public class UsersEntity {
     private int userId;
     private String firstName;
@@ -16,13 +16,9 @@ public class UsersEntity {
     private String address2;
     private String city;
     private String state;
-    private int zip;
+    private String zip;
     private String country;
     private Timestamp date;
-
-    public void setZip(String zip) {
-        this.zip = zip;
-    }
 
     @Id
     @Column(name = "UserID", nullable = false)
@@ -96,11 +92,11 @@ public class UsersEntity {
 
     @Basic
     @Column(name = "Zip", nullable = false, length = 11)
-    public int getZip() {
+    public String getZip() {
         return zip;
     }
 
-    public void setZip(int zip) {
+    public void setZip(String zip) {
         this.zip = zip;
     }
 
@@ -154,7 +150,7 @@ public class UsersEntity {
         result = 31 * result + (address2 != null ? address2.hashCode() : 0);
         result = 31 * result + (city != null ? city.hashCode() : 0);
         result = 31 * result + (state != null ? state.hashCode() : 0);
-        result = 31 * result + zip;
+        result = Integer.parseInt(31 * result + zip);
         result = 31 * result + (country != null ? country.hashCode() : 0);
         result = 31 * result + (date != null ? date.hashCode() : 0);
         return result;
