@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.hwassessment.models.UsersEntity" table="Users" schema="RegistrationDB">
+    <class name="com.hwassessment.models.UsersEntity" table="Users" schema="ebdb">
         <id name="userId">
             <column name="UserID" sql-type="int(11)"/>
         </id>
@@ -27,13 +27,13 @@
             <column name="State" sql-type="varchar(45)" length="45"/>
         </property>
         <property name="zip">
-            <column name="Zip" sql-type="int(11)"/>
+            <column name="Zip" sql-type="varchar(11)" length="11"/>
         </property>
         <property name="country">
             <column name="Country" sql-type="varchar(100)" length="100"/>
         </property>
         <property name="date">
-            <column name="Date" sql-type="datetime"/>
+            <column name="Date" sql-type="datetime" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

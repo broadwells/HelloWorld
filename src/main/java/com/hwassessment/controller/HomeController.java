@@ -1,6 +1,5 @@
 package com.hwassessment.controller;
 
-import com.hwassessment.models.UsersEntity;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Order;
